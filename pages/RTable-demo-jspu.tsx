@@ -11,7 +11,7 @@ type JSPUser = {
     }
 
 const
-  jsonplaceholderStores = getStores<JSPUser>('/api/public/todoItem/'),
+  jsonplaceholderStores = getStores<JSPUser>('https://jsonplaceholder.typicode.com/users/'),
   columns: columnsArray<JSPUser>[] = [
     { name: 'id', getVal: ({ id }) => id },
     { name: 'Name', getVal: ({ name }) => name, setVal: val => ({ name: val }) },
